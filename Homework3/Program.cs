@@ -55,7 +55,7 @@ Console.WriteLine($"Расстояние между точками равно: {
 Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
 3 -> 1, 8, 27
 5 -> 1, 8, 27, 64, 125
-*/
+
 
 Console.WriteLine("Введите число N: ");
 int N = Convert.ToInt32(Console.ReadLine());
@@ -65,3 +65,50 @@ for (int i = 1; i <= N; i++)
 }
 
 
+
+Console.Write("введите число А: ");
+int limit = Convert.ToInt32(Console.ReadLine());
+int sum = 0;
+for (int i = 1; i <= limit; i++)
+{
+    sum += i;
+}
+Console.WriteLine($"сумма чисел от 1 до {limit} = {sum}");
+
+
+int Calculate(int a, int b, char sing);
+{
+    int result = 0;
+    if (sign == '+')
+    {
+        result = a + b;
+    }
+    else if (sign == '-')
+    {
+        result = a - b;
+    }
+    else
+    {
+        Console.WriteLine("Такого знака нет: (");
+    }
+    return result;
+}
+Console.WriteLine(Calculate(100, 25,'-'));
+Console.WriteLine(Calculate(100, 400,'+'));
+Console.WriteLine(Calculate(100, 400,'*'));
+*/
+
+int[] GetArray(int size, int min, int max)
+{
+    int[] array = new int[size];
+    for (int i = 0; i < size; i ++)
+    {
+        array[i] = new Random().Next(min, max + 1);
+    }
+    return array;
+}
+int[] resultArray = GetArray(10, 0, 10);
+Console.WriteLine($"Исходный массив: [{String.Join("; ", resultArray)}]");
+// через резервный массив
+
+int[]
